@@ -1,0 +1,112 @@
+/* Вграждане на локалните шрифтове */
+@font-face {
+  font-family: 'Figtree';
+  src: url('./Figtree-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('./Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+:root {
+  /* Colors от твоя style-guide */
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+  
+  --font-main: 'Figtree', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card {
+  background-color: var(--white);
+  max-width: 384px;
+  border-radius: 20px;
+  border: 1px solid var(--gray-950);
+  box-shadow: 8px 8px 0px 0px var(--gray-950);
+  padding: 24px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px 0px var(--gray-950);
+}
+
+.card-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.category {
+  background-color: var(--yellow);
+  color: var(--gray-950);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.publish-date {
+  margin: 12px 0;
+  font-size: 14px;
+  color: var(--gray-950);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--gray-950);
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--yellow);
+}
+
+.description {
+  color: var(--gray-500);
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.author-name {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--gray-950);
+}
